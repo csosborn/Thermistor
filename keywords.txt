@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map for SafetyPin
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Thermistor	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+temperature	KEYWORD2
+calibrate	KEYWORD2
+raw			KEYWORD2
+RtForV		KEYWORD2
+FtoK		KEYWORD2
+KtoF		KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
