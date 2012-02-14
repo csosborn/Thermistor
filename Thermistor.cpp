@@ -48,10 +48,6 @@ void Thermistor::calibrate(
   c3 = det3(1, lnR1, T1, 1, lnR2, T2, 1, lnR3, T3) / det;
 }
 
-void Thermistor::calibrate(const calibration_set_t& calSet) {
-  calibrate(calSet.S1.T, calSet.S1.V, calSet.S2.T, calSet.S2.V, calSet.S3.T, calSet.S3.V);
-}
-
 float Thermistor::RtForV(float V) {
   return m_Rb * (1024.0/V - 1);
 }

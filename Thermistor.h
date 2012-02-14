@@ -6,17 +6,6 @@
 
 typedef float temperature_t;
 
-typedef struct {
-  temperature_t T;
-  float V;
-} cal_sample_t;
-
-typedef struct {
-  cal_sample_t S1;
-  cal_sample_t S2;
-  cal_sample_t S3;
-} calibration_set_t;
-
 class Thermistor {
   private:
     AnalogIn& m_pin;
@@ -51,8 +40,6 @@ class Thermistor {
                      temperature_t T2, const float& V2, 
                      temperature_t T3, const float& V3);
 
-    void calibrate(const calibration_set_t& calSet);
-    
     // Calculate the thermistor resistence implied by the given analog reading.
     float RtForV(float V);
                  
