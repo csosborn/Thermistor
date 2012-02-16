@@ -30,6 +30,11 @@ void Thermistor::calibrate(
   temperature_t T2, const float& V2, 
   temperature_t T3, const float& V3) {
   
+  // @TODO: the code below uses Cramer's Rule on a 3x3 matrix to solve for
+  // the three Steinhart-Hart coefficients. This works fine, but it might 
+  // be more compact to use Gaussian elimination. Worth considering if 
+  // space is tight. 
+
   float lnR1 = log(RtForV(V1));
   float lnR2 = log(RtForV(V2));
   float lnR3 = log(RtForV(V3));

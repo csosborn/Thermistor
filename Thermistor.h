@@ -18,6 +18,9 @@ class Thermistor {
     float c2;
     float c3;
     
+    // Calculate the thermistor resistence implied by the given analog reading.
+    float RtForV(float V);
+
   public:
         
     // Construct a thermistor probe using the given analog input pin.
@@ -39,15 +42,12 @@ class Thermistor {
     void calibrate(  temperature_t T1, const float& V1, 
                      temperature_t T2, const float& V2, 
                      temperature_t T3, const float& V3);
-
-    // Calculate the thermistor resistence implied by the given analog reading.
-    float RtForV(float V);
                  
     // Convert Fahrenheit to Kelvin
-    temperature_t FtoK(temperature_t F);
+    static temperature_t FtoK(temperature_t F);
 
     // Convert Kelvin to Fahrenheit
-    temperature_t KtoF(temperature_t K);
+    static temperature_t KtoF(temperature_t K);
     
 };
 
