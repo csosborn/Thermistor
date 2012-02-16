@@ -3,6 +3,11 @@ Thermistor
 
 The Thermistor class provides easy access to a thermistor device and supports onboard three-point calibration using the Steinhart-Hart equation.
 
+Dependencies
+------------
+
+Thermistor requires the SafetyPin library, which may be found [here](https://github.com/csosborn/SafetyPin).
+
 Usage
 -----
 
